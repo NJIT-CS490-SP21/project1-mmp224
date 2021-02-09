@@ -34,3 +34,4 @@
 1. export CLIENT_ID = 'APIKEY'
 2. export CLIENT_SECRET = 'APIKEY'
 - And where it says APIKEY, add your own key by following the steps of creating a developer account on https://developer.spotify.com/documentation/web-api/quick-start/
+- Make sure once the .env file steps are done, in the .gitignore file add .env which will insure it stays hidden
