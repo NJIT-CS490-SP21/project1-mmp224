@@ -1,0 +1,19 @@
+<!DOCTYPE html> 
+  
+<html> 
+<head> 
+    <link rel="stylesheet" href={{ url_for('static', filename="style2.css") }} />
+</head> 
+<body> 
+    <h1><li class=align>Mann's Spotify API:</li></h1>
+    <h2><li class=align><img src = {{image}} width="450" height"450"/> </li></h2>
+    <h3><li class=align>{{artist_Name}}</li></h3>
+    <h4><li class=align><p style="font-size:30px">{{song_Title}}</p></li></h4>
+    <li class=align>
+        <audio controls>
+            <source src="{{preview_Url}}" type="audio/mpeg">
+        </audio>
+    </li>
+    <h5><li class=align>{{preview_Url}}</li></h5>
+</body> 
+</html> 

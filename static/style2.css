@@ -1,0 +1,11 @@
+body {
+    background-color: greenyellow;
+    font-family: Verdana, sans-serif;
+}
+
+.align{
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
