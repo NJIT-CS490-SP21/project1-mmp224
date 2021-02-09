@@ -31,6 +31,6 @@
 
 ### Setting up the project:
 - All files in the main branch help with building this project but what's not shows is the .env file, which helps save your API Key from being stolen. In order to do that, create the .env file and inside it add the following 2 lines of code:
-    export CLIENT_ID = 'APIKEY'
-    export CLIENT_SECRET = 'APIKEY'
+1. export CLIENT_ID = 'APIKEY'
+2. export CLIENT_SECRET = 'APIKEY'
 - And where it says APIKEY, add your own key by following the steps of creating a developer account on https://developer.spotify.com/documentation/web-api/quick-start/
