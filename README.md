@@ -11,3 +11,22 @@
 
 ### What would you do to improve your project in the future?
 - At this point after completing milestone 1, the main thing to improve would be how the html page looks. Making it pleasing to the eye with better placement, font, and a message telling the user there's no audio preview if it seems to be the case.
+
+### Technologies:
+- Cloud9
+
+### Framework:
+- Flask
+
+### Libraries:
+- from flask import Flask, render_template
+- import os
+- import random
+- import requests
+- from dotenv import load_dotenv, find_dotenv
+- import json 
+
+### APIs:
+- Spotify
+
+### Setting up the project:
