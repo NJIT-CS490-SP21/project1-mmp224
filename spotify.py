@@ -14,7 +14,7 @@ app = Flask(__name__)
 @app.route('/')
 def spotify_API():
     AUTH_URL = 'https://accounts.spotify.com/api/token'
-                        #Logic                  The Weeknd                 Travis Scott              21 Savage                Metro Boomin                Big Sean
+                         #Logic                  The Weeknd                 Travis Scott              21 Savage                Metro Boomin                Big Sean
     artist_ID = ['4xRYI6VqpkE3UwrDrAZL8L', '1Xyo4u8uXC1ZmMpatF05PJ', '0Y5tJX1MQlPlqiwlOH1tJY', '1URnnhqYAYcrqrcwql10ft', '0iEtIxbK0KxaSlF7G42ZOp', '0c173mlxpT3dSFRgMO8XPh']
     random_Artist = random.choice(artist_ID)
     load_dotenv(find_dotenv())
