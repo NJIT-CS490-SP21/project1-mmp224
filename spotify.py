@@ -11,7 +11,7 @@ from dotenv import load_dotenv, find_dotenv
 import json 
 
 app = Flask(__name__)   #instance for flask
-@app.route('/')         #function for the decorater that defines how its handled when u go to route
+@app.route('/')         #python decorater, conncets this route/url with the function
 
 def spotify_API():
     AUTH_URL = 'https://accounts.spotify.com/api/token'     #The endpoint for the API provider authorization server
@@ -48,13 +48,6 @@ def spotify_API():
     response_2 = requests.get(BASE_url_2, headers=headers)  #for second url (artist image)
     data_2 = response_2.json()                              
     
-    '''
-    print(data)
-    format_Json = json.dumps(data, indent=2)
-    x = open('bruh.txt', 'w+')
-    x.write(format_Json)
-    '''
-    
     rC = random.randint(0, len(data["tracks"]) - 1)
     
     song_Title      = data["tracks"][rC]["name"]
@@ -63,6 +56,24 @@ def spotify_API():
     artist_image    = data_2['images'][0]["url"] 
     preview_Url     = data["tracks"][rC]["preview_url"]
     
+    #Genius Connection
+    genius_AccessToken = os.getenv("CLIENT_ACCESS_TOKEN_GENIUS")
+    BASE_url_3 = 'https://api.genius.com'
+    genius_Headers = { 'Authorization': 'Bearer ' + genius_AccessToken }
+    genius_Url = BASE_url_3 + '/search'
+    genius_Data = {'q': song_Title + ' ' + artist_Name}
+    response_3 = requests.get(genius_Url, data = genius_Data, headers = genius_Headers)
+    data_3 = response_3.json()
+    genius_Lyrics = data_3['response']['hits'][0]['result']['url']
+    
+    '''
+    print(genius_AccessToken)
+    print(data_3)
+    format_Json = json.dumps(data_3, indent=2)
+    x = open('bruh.txt', 'w+')
+    x.write(format_Json)
+    '''
+    
     #translate to html file
     return render_template(
         'index.html',
@@ -70,7 +81,8 @@ def spotify_API():
         artist_Name = artist_Name, 
         image = image,
         artist_image = artist_image,
-        preview_Url = preview_Url
+        preview_Url = preview_Url,
+        genius_Lyrics = genius_Lyrics
     )
     
 app.run(
