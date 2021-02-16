@@ -1,5 +1,8 @@
 # Project 1 mmp224
 
+### Project Demo
+<img src="spotifyAPI.gif" width=650><br>
+
 ## Milestone 1 questions:
 ### What are at least 3 technical issues you encountered with your project? How did you fix them?
 - When trying to fetch the json data for an artists, I initially kept recieving an error with status 401 and it took me some time to realize that I had to get something called and OAuth Token, which ended up fixing the issue.
