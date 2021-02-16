@@ -16,8 +16,8 @@ app = Flask(__name__)   #instance for flask
 def spotify_API():
     AUTH_URL = 'https://accounts.spotify.com/api/token'     #The endpoint for the API provider authorization server
     
-                         #Logic                  The Weeknd                 Travis Scott              21 Savage                Metro Boomin                Big Sean
-    artist_ID = ['4xRYI6VqpkE3UwrDrAZL8L', '1Xyo4u8uXC1ZmMpatF05PJ', '0Y5tJX1MQlPlqiwlOH1tJY', '1URnnhqYAYcrqrcwql10ft', '0iEtIxbK0KxaSlF7G42ZOp', '0c173mlxpT3dSFRgMO8XPh']
+                         #Logic                  The Weeknd                 Travis Scott              21 Savage                Metro Boomin                Rich Brian
+    artist_ID = ['4xRYI6VqpkE3UwrDrAZL8L', '1Xyo4u8uXC1ZmMpatF05PJ', '0Y5tJX1MQlPlqiwlOH1tJY', '1URnnhqYAYcrqrcwql10ft', '0iEtIxbK0KxaSlF7G42ZOp', '2IDLDx25HU1nQMKde4n61a']
     random_Artist = random.choice(artist_ID)
     
     load_dotenv(find_dotenv())      #looks for any env file in current directory

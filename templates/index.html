@@ -4,16 +4,36 @@
 <head> 
     <link rel="stylesheet" href={{ url_for('static', filename="style2.css") }} />
 </head> 
-<body> 
-    <h1><li class=align>Mann's Spotify API:</li></h1>
-    <h2><li class=align><img src = {{image}} width="450" height"450"/> </li></h2>
-    <h3><li class=align>{{artist_Name}} <img src = {{artist_image}} width="100" height"100"/></li></h3>
-    <h4><li class=align><p style="font-size:30px">{{song_Title}}</p></li></h4>
+<body>
+    <div class=upper_left>
+        <img src  = 'https://iptmod.com/wp-content/uploads/2020/09/iptmod_spotify_8.5.74.834_iptmod.com_-768x768.png' width="75" height="75"/>
+    </div>
+    <div class=upper_right>
+        <img src  = 'https://iptmod.com/wp-content/uploads/2020/09/iptmod_spotify_8.5.74.834_iptmod.com_-768x768.png' width="75" height="75"/>
+    </div>
+    <h1>
+        <li class=align>Mann's Spotify API:</li>
+    </h1>
+    <li class=align><img src = {{image}} width="450" height="450"/> </li>
+    <h4>
+        <li class=align>
+            <p style="font-size:30px">Track: {{song_Title}}</p>
+        </li>
+    </h4>
+    <h2>
+        <li class=align>By: {{artist_Name}} </br>
+            <img src = {{artist_image}} width="130" height="130"/>
+        </li>
+    </h2>
     <li class=align>
         <audio controls>
             <source src="{{preview_Url}}" type="audio/mpeg">
         </audio>
     </li>
-    <h5><li class=align>{{genius_Lyrics}}</li></h5>
+    <li class=align>
+        <p style = "font-size:30px">
+            <a href = {{genius_Lyrics}}>Click here to view the lyrics!</a>
+        </p>
+    </li>
 </body> 
 </html> 
