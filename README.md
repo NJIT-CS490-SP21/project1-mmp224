@@ -5,7 +5,7 @@
 
 ### Setting up the project:
 - In order to go on about this project, we have to start by getting access to the client credentials to the Spotify API. A spotify account is needed for this. Then go to this link: https://developer.spotify.com/ , open the dashboard and create a Client Id. Once accquired we need to start programming in Python. All files in the main branch help with building this project. But main things to know is the user needs to send GET and POST requests, then we have to pass an access token so we can access the endpoints. Once we successfully GET the request, we need to view it in JSON and parse the information to get the specifics like artists name, song, etc. And after obtaining the info, we can place it in html and showcase the info on it. An addition to this project is the implementation of the Genius API. Just like spotify we need to make a request to Genius by getting an access token from https://genius.com/api-clients. And after that we just implement the info in python as we did for spotify. And from then on its straight forward to parse through the json and get the lyrics url. 
--What's not shown is the .env file, which helps save your API Key from being stolen. In order to do that, create the .env file and inside it add the following 2 lines of code:
+- What's not shown is the .env file, which helps save your API Key from being stolen. In order to do that, create the .env file and inside it add the following 2 lines of code:
 1. export CLIENT_ID = 'APIKEY'
 2. export CLIENT_SECRET = 'APIKEY'
 - And where it says APIKEY, add your own key by following the steps of creating a developer account on https://developer.spotify.com/documentation/web-api/quick-start/
